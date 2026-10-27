@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>개발자 포트폴리오 | Backend & AI Service</title>
+  
+  <!-- Pretendard Web Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Mermaid.js for Diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#overview" class="nav-brand" data-switch-tab="overview">
+        <span style="font-size: 1.3rem;">💻</span>
+        <span>Portfolio</span>
+      </a>
+
+      <button class="icon-btn mobile-toggle" id="mobileToggle" aria-label="메뉴 토글">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="nav-tabs" id="navTabs">
+        <a href="#overview" class="nav-btn active" data-tab="overview">전체 개요</a>
+        <a href="#dongnebangne" class="nav-btn" data-tab="dongnebangne">동네방네</a>
+        <a href="#custom-fairytale" class="nav-btn" data-tab="custom-fairytale">Custom Fairytale</a>
+        <a href="#arkblock" class="nav-btn" data-tab="arkblock">ArkBlock</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="icon-btn" id="themeToggle" title="테마 변경">
+          <span id="themeIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <!-- GitHub Profile -->
+        <a href="https://github.com/null210" target="_blank" rel="noopener noreferrer" class="icon-btn" title="GitHub 바로가기">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- TAB 1: OVERVIEW -->
+    <section id="overview" class="tab-content active">
+      <div class="hero-section">
+        <span class="hero-badge">Backend &amp; AI Service Developer</span>
+        <h1 class="hero-title">문제를 정의하고 시스템으로 해결하는<br />백엔드 개발자 포트폴리오</h1>
+        <p class="hero-subtitle">
+          안정적인 서버 아키텍처 설계, 동시성 제어 및 데이터 무결성 보장, 그리고 생성형 AI 및 딥러닝 연동 파이프라인 구축 경험을 담았습니다.
+        </p>
+        <div class="hero-buttons">
+          <a href="#dongnebangne" class="btn-primary" data-switch-tab="dongnebangne">
+            <span>대표 프로젝트 보기</span>
+            <span>&rarr;</span>
+          </a>
+          <a href="https://github.com/null210" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <span>GitHub 방문</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Projects Section -->
+      <h2 class="section-title">📂 프로젝트 목록</h2>
+      <div class="projects-grid">
+        <!-- Project Card 1: 동네방네 -->
+        <div class="project-card" data-switch-tab="dongnebangne">
+          <div class="card-header">
+            <span class="card-icon">📌</span>
+            <h3 class="card-title">동네방네 (Every Corner)</h3>
+            <p class="card-desc">
+              친구·동아리 구성원이 "언제, 어디서 만날지"를 한곳에서 정하는 실시간 약속 및 장소 조율 웹 서비스
+            </p>
+          </div>
+          <div class="card-meta">
+            <div class="card-meta-item">⏱ 8주 (4인)</div>
+            <div class="card-meta-item">💼 백엔드 전담</div>
+          </div>
+          <div class="card-tags">
+            <span class="tag-badge">.NET 8</span>
+            <span class="tag-badge">ASP.NET Core</span>
+            <span class="tag-badge">PostgreSQL</span>
+            <span class="tag-badge">EF Core 8</span>
+            <span class="tag-badge">SignalR</span>
+            <span class="tag-badge">Docker</span>
+          </div>
+          <div class="card-action">
+            <span>자세히 보기</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project Card 2: Custom Fairytale -->
+        <div class="project-card" data-switch-tab="custom-fairytale">
+          <div class="card-header">
+            <span class="card-icon">🧚</span>
+            <h3 class="card-title">Custom Fairytale</h3>
+            <p class="card-desc">
+              아이의 취향을 입력하면 맞춤형 동화 텍스트, 삽화, 음성(mp3)을 생성해 한 권의 책으로 제공하는 AI 서비스
+            </p>
+          </div>
+          <div class="card-meta">
+            <div class="card-meta-item">⏱ 16주 (4인)</div>
+            <div class="card-meta-item">💼 기획·설계·백엔드</div>
+          </div>
+          <div class="card-tags">
+            <span class="tag-badge">ASP.NET Core</span>
+            <span class="tag-badge">C#</span>
+            <span class="tag-badge">Flutter</span>
+            <span class="tag-badge">Ollama (LLM)</span>
+            <span class="tag-badge">ElevenLabs (TTS)</span>
+            <span class="tag-badge">SQLite</span>
+          </div>
+          <div class="card-action">
+            <span>자세히 보기</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+
+        <!-- Project Card 3: ArkBlock -->
+        <div class="project-card" data-switch-tab="arkblock">
+          <div class="card-header">
+            <span class="card-icon">🧩</span>
+            <h3 class="card-title">ArkBlock</h3>
+            <p class="card-desc">
+              블록 코딩을 활용한 딥러닝 모델 레이어 교육 솔루션으로 레이어 연결 검증 및 데이터 전처리 파이프라인 구현
+            </p>
+          </div>
+          <div class="card-meta">
+            <div class="card-meta-item">⏱ 2025.06 ~ 08 (5인)</div>
+            <div class="card-meta-item">💼 검증 로직·전처리 설계</div>
+          </div>
+          <div class="card-tags">
+            <span class="tag-badge">Java</span>
+            <span class="tag-badge">Python</span>
+            <span class="tag-badge">Keras</span>
+            <span class="tag-badge">Svelte</span>
+            <span class="tag-badge">Optuna</span>
+          </div>
+          <div class="card-action">
+            <span>자세히 보기</span>
+            <span>&rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills Section -->
+      <h2 class="section-title">🧰 기술 역량</h2>
+      <div class="skills-container">
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>⚙️ Backend &amp; Architecture</h4>
+            <ul class="skill-list">
+              <li class="skill-item">C# / .NET 8</li>
+              <li class="skill-item">ASP.NET Core</li>
+              <li class="skill-item">Java</li>
+              <li class="skill-item">RESTful API 설계</li>
+              <li class="skill-item">동시성 제어 (Row Lock)</li>
+              <li class="skill-item">SignalR (실시간 통신)</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4>🤖 AI &amp; Data Pipeline</h4>
+            <ul class="skill-list">
+              <li class="skill-item">Python</li>
+              <li class="skill-item">Keras / 딥러닝 레이어</li>
+              <li class="skill-item">Ollama (Local LLM)</li>
+              <li class="skill-item">ElevenLabs (TTS API)</li>
+              <li class="skill-item">Optuna 최적화</li>
+              <li class="skill-item">데이터 전처리 파이프라인</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4>💾 Database &amp; DevOps</h4>
+            <ul class="skill-list">
+              <li class="skill-item">PostgreSQL (JSONB)</li>
+              <li class="skill-item">EF Core 8</li>
+              <li class="skill-item">SQLite</li>
+              <li class="skill-item">Docker Compose</li>
+              <li class="skill-item">Git / GitHub</li>
+              <li class="skill-item">GCP 환경 배포 경험</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: 동네방네 (Every Corner) -->
+    <section id="dongnebangne" class="tab-content">
+      <article class="doc-article">
+        <div class="doc-header">
+          <h1>📌 Project. 동네방네 (Every Corner)</h1>
+          <p class="doc-tagline">친구·동아리·스터디 구성원이 <strong>“언제, 어디서 만날지”</strong> 를 한 곳에서 정하는 약속 조율 웹 서비스</p>
+          <div class="badges-row">
+            <img src="https://img.shields.io/badge/.NET_8-512BD4?logo=dotnet&logoColor=white" alt=".NET 8" />
+            <img src="https://img.shields.io/badge/ASP.NET_Core-5C2D91?logo=dotnet&logoColor=white" alt="ASP.NET Core" />
+            <img src="https://img.shields.io/badge/EF_Core_8-512BD4" alt="EF Core 8" />
+            <img src="https://img.shields.io/badge/PostgreSQL_16-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL 16" />
+            <img src="https://img.shields.io/badge/SignalR-0078D4" alt="SignalR" />
+            <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" alt="Docker" />
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 25%;">구분</th>
+                <th>내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>프로그램</strong></td>
+                <td>미래내일 일경험 프로젝트형 · 참여기업 ㈜코아아이티</td>
+              </tr>
+              <tr>
+                <td><strong>기간</strong></td>
+                <td>8주</td>
+              </tr>
+              <tr>
+                <td><strong>팀 구성</strong></td>
+                <td>4인</td>
+              </tr>
+              <tr>
+                <td><strong>내 역할</strong></td>
+                <td>백엔드</td>
+              </tr>
+              <tr>
+                <td><strong>기술 스택</strong></td>
+                <td>ASP.NET Core · PostgreSQL · Docker Compose · Kakao OAuth · Google Places API</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>해결하려던 문제</h3>
+        <ol>
+          <li><strong>일정 조율의 번거로움</strong> – 대화방에 흩어진 가능 시간을 사람이 직접 다시 읽고 취합해야 함</li>
+          <li><strong>장소 의견 취합의 어려움</strong> – 서로 다른 장소 제안을 구분하고 선호를 비교하기 어려움</li>
+          <li><strong>플랫폼 파편화</strong> – 지도앱 저장 &rarr; 메신저 공유 &rarr; 개별 확인의 반복</li>
+        </ol>
+
+        <h3>서비스 흐름</h3>
+        <div class="mermaid-container">
+          <pre class="mermaid">
+flowchart LR
+    A[모임 준비<br/>워크스페이스 생성·초대] --> B[장소 수집<br/>검색·저장]
+    B --> C[약속 생성<br/>날짜 범위 설정]
+    C --> D[의견 조율<br/>가능 시간·장소 투표]
+    D --> E[약속 확정<br/>최종 시간·장소]
+          </pre>
+        </div>
+
+        <hr />
+
+        <h2>🛠 담당 업무</h2>
+        <ul>
+          <li>ASP.NET Core 기반 REST API 설계·구현(인증·워크스페이스·장소·즐겨찾기·댓글·약속·투표)</li>
+          <li>카카오 OAuth + 쿠키 인증</li>
+          <li>SignalR 기반 실시간 댓글 알림</li>
+          <li>Docker Compose 실행·마이그레이션 환경, 통합 테스트, 기능별 API 문서 작성</li>
+        </ul>
+
+        <hr />
+
+        <h2>🏗 아키텍처</h2>
+        <h3>시스템 구성</h3>
+        <div class="mermaid-container">
+          <pre class="mermaid">
+flowchart LR
+    U[사용자<br/>React + Vite] -- "REST / Cookie" --> API
+    U -. "WebSocket" .-> HUB
+    subgraph SERVER[ASP.NET Core 8]
+        API[Controllers]
+        HUB[SignalR Hubs]
+    end
+    API --> SVC[Services]
+    HUB --- SVC
+    SVC --> DB[(PostgreSQL)]
+    SVC --> KAKAO[Kakao OAuth]
+    SVC --> GOOGLE[Google Places / Geocoding]
+          </pre>
+        </div>
+
+        <h3>ERD</h3>
+        <div class="mermaid-container">
+          <pre class="mermaid">
+erDiagram
+    USER ||--o{ WORKSPACE_MEMBER : "참여"
+    WORKSPACE ||--o{ WORKSPACE_MEMBER : "구성"
+    WORKSPACE ||--o{ WORKSPACE_INVITE : "초대 토큰(7일)"
+    WORKSPACE ||--o{ SPOT : "저장 장소"
+    WORKSPACE ||--o{ FAVORITE : ""
+    SPOT ||--o{ FAVORITE : ""
+    SPOT ||--o{ COMMENT : ""
+    COMMENT ||--o{ COMMENT : "대댓글"
+    WORKSPACE ||--o{ APPOINTMENT : "약속"
+    APPOINTMENT ||--o{ APPOINTMENT_PARTICIPANT : "참여자"
+    APPOINTMENT ||--o{ APPOINTMENT_POLL : "시간·장소 투표"
+    USER ||--o{ APPOINTMENT_PARTICIPANT : ""
+
+    WORKSPACE_MEMBER {
+        string role "owner / editor / viewer"
+    }
+    SPOT {
+        string placeId "UNIQUE(workspaceID, placeId)"
+        double latitude
+        double longitude
+    }
+    APPOINTMENT {
+        guid id PK
+        string status "collecting / confirmed"
+        date scheduleStartDate
+        date scheduleEndDate
+    }
+    APPOINTMENT_POLL {
+        guid id PK
+        string status "open / confirmed"
+        jsonb data "선택지 · 사용자별 응답 · 확정 선택지"
+    }
+          </pre>
+        </div>
+
+        <hr />
+
+        <h2>💡 핵심 구현</h2>
+        <h3>1. 시간·장소 조율을 한 번에</h3>
+        <p>날짜 범위가 있는 약속을 만들면 같은 트랜잭션에서 시간 투표와 장소 투표를 함께 생성합니다.</p>
+
+        <h3>2. 행 잠금으로 동시성 제어</h3>
+        <p>후보 추가·투표·확정 같은 약속 변경 작업을 <code>SELECT … FOR UPDATE</code> 행 잠금과 트랜잭션으로 직렬화했습니다. 여러 참여자가 동시에 같은 장소를 후보로 추가하거나, 확정과 투표가 겹쳐도 데이터가 어긋나지 않습니다.</p>
+
+        <h3>3. JSONB로 유연한 투표 모델</h3>
+        <p>투표의 선택지·사용자별 응답·확정 선택지를 PostgreSQL <code>jsonb</code> 한 컬럼(<code>PollData</code>)에 저장했습니다. 시간 투표와 장소 투표를 같은 구조로 다루면서 복수 선택·변경·취소를 지원하고, EF Core <code>ValueConverter</code> / <code>ValueComparer</code>로 변경 감지를 정확히 처리했습니다.</p>
+
+        <h3>5. 제약조건으로 데이터 무결성 보장</h3>
+        <ul>
+          <li><code>(workspaceID, placeId)</code> 유니크 인덱스로 같은 장소의 중복 저장 방지.</li>
+          <li><code>(workspaceID, userID)</code> 유니크로 중복 멤버 방지, 약속 참여자는 복합 키</li>
+          <li>초대는 7일 만료 토큰, 멤버 추방 시 기존 초대 링크 모두 폐기</li>
+          <li>워크스페이스 삭제는 이름 재입력 확인 후 FK 연쇄 삭제를 한 트랜잭션으로 처리</li>
+        </ul>
+
+        <hr />
+
+        <h2>🔌 주요 API</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 20%;">영역</th>
+                <th style="width: 45%;">엔드포인트</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>인증</td>
+                <td><code>POST /api/auth/kakao/login</code><br /><code>GET /api/auth/me</code><br /><code>POST /api/auth/onboarding</code></td>
+                <td>카카오 로그인, 쿠키 발급, 프로필 온보딩</td>
+              </tr>
+              <tr>
+                <td>워크스페이스</td>
+                <td><code>POST·GET·PATCH·DELETE /api/workspace</code></td>
+                <td>생성·목록·수정·삭제(소유자)</td>
+              </tr>
+              <tr>
+                <td>초대</td>
+                <td><code>POST /api/workspace/{id}/invite</code><br /><code>POST /api/invite/{token}/join</code></td>
+                <td>7일 만료 초대 링크</td>
+              </tr>
+              <tr>
+                <td>장소</td>
+                <td><code>GET·POST /api/workspace/{id}/spots</code><br /><code>/spots/import</code></td>
+                <td>워크스페이스별 장소 저장</td>
+              </tr>
+              <tr>
+                <td>약속</td>
+                <td><code>POST /api/workspace/{id}/appointments</code><br /><code>GET /api/appointments/{id}</code></td>
+                <td>약속 생성·상세</td>
+              </tr>
+              <tr>
+                <td>투표</td>
+                <td><code>POST /api/appointments/{id}/polls/{pollId}/votes</code><br /><code>/candidates</code></td>
+                <td>투표 제출·장소 후보 추가</td>
+              </tr>
+              <tr>
+                <td>확정</td>
+                <td><code>POST /api/appointments/{id}/confirm</code></td>
+                <td>최종 시간·장소 동시 확정</td>
+              </tr>
+              <tr>
+                <td>실시간</td>
+                <td><code>/hubs/comment</code> (SignalR)</td>
+                <td>댓글 알림</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <blockquote>
+          <p>상세 요청·응답은 <code>docs/</code> 의 기능별 문서(약속·투표, 조율, 장소, 설정, 온보딩, 삭제)와 Swagger에 정리했습니다.</p>
+        </blockquote>
+
+        <hr />
+
+        <h2>🔥 회고</h2>
+        <h3>GCP VM 배포 시도</h3>
+        <p>로컬에서는 Docker Compose로 정상 동작했지만, GCP VM에 배포하는 과정에서 서비스를 정상 구동하지 못했습니다. 이후, <code>docker-compose.yml</code>의 환경변수가 항상 우선 적용되어 CORS가 막혔다는 사실을 배우고 정리했습니다.</p>
+
+        <p><strong>배운 점</strong></p>
+        <ul>
+          <li>“내 로컬에서 되는 것”과 “배포 가능한 것”은 다르며, <strong>배포 계획을 개발 초기에 세워야</strong> 한다</li>
+          <li>설정 값이 <strong>어디에서 최종 결정되는지</strong>(기본 설정 &lt; 환경변수) 알아야 디버깅 시간이 줄어든다</li>
+          <li>진행 상황·결정 기록을 팀 전체가 공유하지 못해 시행착오가 길어졌고, 이후 <strong>배포 계획·기록 관리 체계화</strong>의 필요성을 팀 회고에 반영했다</li>
+        </ul>
+
+        <hr />
+
+        <h2>🌱 성과 &amp; 배운 점</h2>
+        <ul>
+          <li>8주 안에 모임 생성·초대 &rarr; 장소 저장 &rarr; 약속 생성 &rarr; 시간·장소 투표 &rarr; 약속 확정까지 하나의 흐름을 백엔드로 완성</li>
+          <li>멘토링에서 지도 서비스 예외 상황을 원인 분석 후 재구현하고, 장소 투표 UX에 대한 팀 의견을 조율해 기존 결정을 유연하게 수정하는 협업 역량을 평가받음</li>
+          <li>최종 점검에서 솔루션의 문제 해결 가능성과 활용 방향에 긍정적 피드백</li>
+          <li>요청·응답 구조와 기능 경계를 사전에 합의하고 프론트엔드와 API 계약을 계속 조정하는 것이 안정적인 통합의 핵심임을 체감</li>
+        </ul>
+
+        <div class="page-navigation-bar">
+          <a href="#overview" class="page-nav-link" data-switch-tab="overview">&larr; 전체 개요로 가기</a>
+          <a href="#custom-fairytale" class="page-nav-link" data-switch-tab="custom-fairytale">다음 프로젝트: Custom Fairytale &rarr;</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- TAB 3: Custom Fairytale -->
+    <section id="custom-fairytale" class="tab-content">
+      <article class="doc-article">
+        <div class="doc-header">
+          <h1>🧚 Custom Fairytale</h1>
+          <p class="doc-tagline"><strong>아이의 취향을 동화로 만드는 AI 맞춤형 동화·오디오 생성 서비스</strong></p>
+          <div class="badges-row">
+            <img src="https://img.shields.io/badge/ASP.NET_Core-5C2D91?logo=dotnet&logoColor=white" alt="ASP.NET Core" />
+            <img src="https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white" alt="C#" />
+            <img src="https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white" alt="Flutter" />
+            <img src="https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white" alt="SQLite" />
+            <img src="https://img.shields.io/badge/Ollama-000000" alt="Ollama" />
+            <img src="https://img.shields.io/badge/ElevenLabs-000000" alt="ElevenLabs" />
+            <img src="https://img.shields.io/badge/Google_Drive-4285F4?logo=googledrive&logoColor=white" alt="Google Drive" />
+          </div>
+        </div>
+
+        <h2>📌 프로젝트 개요</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 25%;">구분</th>
+                <th>내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>개발 기간</strong></td>
+                <td>16주</td>
+              </tr>
+              <tr>
+                <td><strong>팀 구성</strong></td>
+                <td><code>4인</code></td>
+              </tr>
+              <tr>
+                <td><strong>내 역할</strong></td>
+                <td><strong>기획 · 서비스 설계 · 백엔드(메인 서버) 개발</strong> · 클라이언트 개발 지연 시 직접 지원</td>
+              </tr>
+              <tr>
+                <td><strong>저장소</strong></td>
+                <td><code>[GitHub 링크 입력]</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>🎯 목적</h3>
+        <p>맞벌이 부부가 늘면서, 아이에게 잠들기 전 책을 읽어줄 여력이 부족한 상황이 늘고 있습니다. 부모가 직접 읽어주기 어려울 때 사용할 수 있는 서비스를 만드는 것이 목표입니다. 아이의 취향을 입력하면 AI가 동화 텍스트 · 삽화 · 음성(오디오)을 만들어 한 권의 동화책으로 제공합니다.</p>
+
+        <hr />
+
+        <h2>🧰 기술 스택 및 선택 이유</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 20%;">영역</th>
+                <th style="width: 35%;">기술</th>
+                <th>선택 이유</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Backend</td>
+                <td>C# · ASP.NET Core</td>
+                <td>익숙한 언어를 서버 개발에 적용해 학습 비용을 줄이고 구현에 집중</td>
+              </tr>
+              <tr>
+                <td>Frontend</td>
+                <td>Flutter</td>
+                <td>모바일 접근성이 좋고, 초보자도 Figma 시안을 기반으로 쉽게 화면 구현 가능</td>
+              </tr>
+              <tr>
+                <td>DB</td>
+                <td>SQLite (EF Core)</td>
+                <td>모바일 환경에서 가장 가벼운 DB, 로그·세션 관리용</td>
+              </tr>
+              <tr>
+                <td>AI – LLM</td>
+                <td>Ollama (EEVE-Korean-10.8B)</td>
+                <td>한국어 동화 텍스트 생성</td>
+              </tr>
+              <tr>
+                <td>AI – TTS</td>
+                <td>ElevenLabs API</td>
+                <td>동화 음성(mp3) 생성</td>
+              </tr>
+              <tr>
+                <td>AI – Image</td>
+                <td>DALL·E API</td>
+                <td>동화 삽화 생성</td>
+              </tr>
+              <tr>
+                <td>Storage</td>
+                <td>Google Drive API</td>
+                <td>스토리·음성·동화책 파일 저장 및 클라이언트 전달</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr />
+
+        <h2>🏗 아키텍처</h2>
+        <h3>레이어 구조</h3>
+        <div class="doc-img-container">
+          <img src="assets/custom-fairytale-architecture.png" alt="Custom Fairytale 레이어 아키텍처" class="doc-img" onerror="this.parentElement.style.display='none';" />
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 25%;">레이어</th>
+                <th style="width: 45%;">구성</th>
+                <th>역할</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>클라이언트</td>
+                <td>Flutter 모바일 앱</td>
+                <td>부모 중심 인터페이스에서 동화 생성 요청·조회</td>
+              </tr>
+              <tr>
+                <td>서버</td>
+                <td>RESTful API Gateway &rarr; Controller &rarr; Service &rarr; Entity Framework(SQLite)</td>
+                <td>요청 수신, 비즈니스 로직, AI·저장소 연동</td>
+              </tr>
+              <tr>
+                <td>AI 외부 서비스</td>
+                <td>Ollama LLM · 이미지 생성 · ElevenLabs TTS · Google Drive API</td>
+                <td>동화 텍스트·삽화·음성 생성, 파일 저장</td>
+              </tr>
+              <tr>
+                <td>데이터</td>
+                <td>Google Drive(스토리·음성·동화책) · SQLite(로그/세션)</td>
+                <td>생성물과 사용자 정보 분리 저장</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>데이터 흐름</h3>
+        <div class="mermaid-container">
+          <pre class="mermaid">
+sequenceDiagram
+    participant C as 클라이언트(Flutter)
+    participant S as Main 서버(ASP.NET)
+    participant L as LLM(Ollama)
+    participant T as TTS(ElevenLabs)
+    participant I as 이미지 생성
+    participant D as Google Drive
+
+    C->>S: 동화 생성 요청 (아이 취향)
+    S->>L: 프롬프트 전달
+    L-->>S: 동화 텍스트
+    S->>T: 텍스트 전달
+    T-->>S: 음성(mp3)
+    S->>I: 장면 설명 전달
+    I-->>S: 삽화 → 동화책(페이지 템플릿 적용)
+    S->>D: 텍스트·음성·동화책 저장
+    S-->>C: 결과 전달
+    C->>D: 저장된 콘텐츠 조회
+          </pre>
+        </div>
+
+        <hr />
+
+        <h2>🛠 담당 업무</h2>
+        <h3>설계</h3>
+        <ul>
+          <li>솔루션 컨셉을 구체화하기 위해 <strong>서비스 UI 디자인 베이스</strong>와 주요 화면·기능 흐름을 설계</li>
+          <li><strong>백엔드 시스템 구조와 데이터 흐름</strong>을 설계하고, 클라이언트–서버 간 통신 구조를 구성</li>
+        </ul>
+
+        <h3>구현</h3>
+        <ul>
+          <li>C# / ASP.NET으로 <strong>메인 서버 설계·구현</strong></li>
+          <li>LLM · TTS · 이미지 생성 등 <strong>핵심 AI API 연동</strong>, API 호출 및 데이터 처리 파이프라인 구현</li>
+          <li>클라이언트 요청에 따라 필요한 AI API를 호출하고 <strong>처리 결과를 클라이언트에 전달</strong>하는 서버 로직 구현</li>
+        </ul>
+
+        <hr />
+
+        <h2>💡 핵심 구현</h2>
+        <h3>1. 멀티 AI API 기반 파이프라인</h3>
+        <p>메인 서버를 중심으로 <strong>LLM &rarr; TTS &rarr; 이미지 생성</strong>이 이어지는 처리 파이프라인을 구성했습니다. 각 AI API의 요청·응답 형식이 서로 다르기 때문에 서버에서 이를 가공하고, 클라이언트는 <strong>항상 일관된 방식으로 결과를 받도록</strong> 했습니다. 외부 API의 차이를 서버가 흡수하므로 AI 모델을 교체해도 클라이언트 변경을 최소화할 수 있는 구조입니다.</p>
+
+        <h3>2. 동화책 페이지 템플릿 포맷 구조</h3>
+        <p>생성된 글과 삽화가 <strong>정해진 위치에 배치</strong>되도록 여러 페이지 템플릿을 구성했습니다. 콘텐츠의 <strong>유형과 분량에 따라 적절한 템플릿을 선택</strong>하고, 텍스트와 이미지를 지정된 영역에 채워 동화책 페이지를 만듭니다.</p>
+
+        <h3>3. 계층형 서버 구조</h3>
+        <p><code>API Gateway &rarr; Controller &rarr; Service &rarr; Entity Framework</code> 구조로 책임을 나눴습니다. AI 호출과 파일 저장은 Service 계층에서 담당해 Controller는 요청·응답 처리에만 집중하도록 했습니다.</p>
+
+        <hr />
+
+        <h2>🔥 문제 해결 / 어려웠던 점</h2>
+        <h3>① 처음 해보는 서버 구조 설계와 구현</h3>
+        <ul>
+          <li><strong>문제</strong>: 레이어·프로젝트 구조를 설계하고 서버를 직접 구현하는 것이 처음이라, 초기에 전체 구조를 잡기 어려웠음</li>
+          <li><strong>해결</strong>: ASP.NET 공식 문서를 기반으로 필요한 기능을 하나씩 학습·구현하고, AI로 코드 동작 원리를 확인·이해한 뒤 직접 적용하는 과정을 반복</li>
+          <li><strong>결과</strong>: 기술을 단순히 사용하는 데서 그치지 않고, 필요한 개념을 스스로 학습해 구현하는 경험을 쌓음</li>
+        </ul>
+
+        <h3>② 팀원 이탈 상황에서의 역할 분배</h3>
+        <ul>
+          <li><strong>문제</strong>: 팀원들이 비전공 진로 준비·인턴십으로 지속적으로 참여하기 어려워, 기획부터 개발까지 대부분을 맡아야 했음</li>
+          <li><strong>해결</strong>: 모든 업무를 혼자 처리하는 대신 팀원이 할 수 있는 일을 <strong>구체적으로 쪼개 요청</strong> (AI API 모델 비교·테스트, UI/UX 디자인 등). 클라이언트 개발이 지연되면 직접 지원</li>
+          <li><strong>결과</strong>: 전체 개발 일정이 밀리지 않도록 조율</li>
+        </ul>
+
+        <hr />
+
+        <h2>🌱 결과 및 배운 점</h2>
+        <ul>
+          <li>팀원들과 역할을 조율하며 프로젝트를 끝까지 완성했습니다. (최종 평가: <code>A0</code>)</li>
+          <li>새로운 기술을 공식 문서와 다양한 자료로 스스로 학습해 실제 기능으로 구현하는 방법을 익혔습니다.</li>
+          <li>팀원의 상황에 맞춰 역할을 분배하고, 진행 상황에 따라 필요한 업무를 직접 지원하며 팀을 이끄는 경험을 했습니다.</li>
+        </ul>
+
+        <div class="page-navigation-bar">
+          <a href="#dongnebangne" class="page-nav-link" data-switch-tab="dongnebangne">&larr; 이전 프로젝트: 동네방네</a>
+          <a href="#arkblock" class="page-nav-link" data-switch-tab="arkblock">다음 프로젝트: ArkBlock &rarr;</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- TAB 4: ArkBlock -->
+    <section id="arkblock" class="tab-content">
+      <article class="doc-article">
+        <div class="doc-header">
+          <h1>🧩 ArkBlock</h1>
+          <p class="doc-tagline"><strong>블록 코딩을 활용한 딥러닝 모델 레이어 교육 솔루션</strong></p>
+          <p class="doc-desc">딥러닝 층의 역할과 층의 구조를 만드는 법에 대한 학습을 돕는 솔루션</p>
+          <div class="badges-row">
+            <img src="https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white" alt="Java" />
+            <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python" />
+            <img src="https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=white" alt="Keras" />
+            <img src="https://img.shields.io/badge/Svelte-FF3E00?logo=svelte&logoColor=white" alt="Svelte" />
+            <img src="https://img.shields.io/badge/Optuna-2C7BB6" alt="Optuna" />
+            <a href="https://github.com/ArkBlock/web_server" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.shields.io/badge/GitHub-ArkBlock%2Fweb__server-181717?logo=github" alt="GitHub" />
+            </a>
+          </div>
+        </div>
+
+        <h2>📌 프로젝트 개요</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 25%;">구분</th>
+                <th>내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>개발 기간</strong></td>
+                <td>2025.06 ~ 2025.08</td>
+              </tr>
+              <tr>
+                <td><strong>팀 구성</strong></td>
+                <td><code>5인</code></td>
+              </tr>
+              <tr>
+                <td><strong>내 역할</strong></td>
+                <td>BlockIntellisense(레이어 연결 검증) · BlockPreprocessor(데이터셋 전처리) 설계·구현</td>
+              </tr>
+              <tr>
+                <td><strong>저장소</strong></td>
+                <td><a href="https://github.com/ArkBlock/web_server" target="_blank" rel="noopener noreferrer">github.com/ArkBlock/web_server</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>🎯 목적</h3>
+        <p>AI에 대한 지식은 있으나 코딩 경험이 부족한 경우, 또는 딥러닝을 학습하는 과정에 있는 경우를 돕기 위해, 직관적인 툴과 교육 목적의 시각화 기능을 구현했습니다.</p>
+
+        <h3>💭 기획 배경</h3>
+        <p>"손쉬운 AI 개발 서비스 플랫폼 BlockAI"(현재 서비스 종료)에서 아이디어를 착안하여 기획·개발했습니다.</p>
+
+        <hr />
+
+        <h2>🧰 기술 스택</h2>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 25%;">구분</th>
+                <th style="width: 25%;">기술</th>
+                <th>사용 목적</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Language</td>
+                <td>Java</td>
+                <td>팀의 서버 개발 환경에서 사용, 웹 서비스 백엔드 구현</td>
+              </tr>
+              <tr>
+                <td>Language</td>
+                <td>Python</td>
+                <td>AI 모델 학습 및 데이터 처리</td>
+              </tr>
+              <tr>
+                <td>AI Framework</td>
+                <td>Keras</td>
+                <td>딥러닝 모델 구성 및 학습</td>
+              </tr>
+              <tr>
+                <td>Frontend</td>
+                <td>Svelte</td>
+                <td>웹 클라이언트 UI 및 기능 구현</td>
+              </tr>
+              <tr>
+                <td>AI / Optimization</td>
+                <td>Optuna</td>
+                <td>AI 모델 하이퍼파라미터 최적화</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr />
+
+        <h2>🖥 솔루션 메인 화면</h2>
+        <div class="doc-img-container">
+          <img src="assets/arkblock-main.png" alt="ArkBlock 메인 화면" class="doc-img" />
+          <div class="doc-img-caption">ArkBlock 메인 화면 (클릭 시 확대)</div>
+        </div>
+
+        <p>사용자가 별도의 Python 코드 작성 없이 레이어 블록을 조합해 AI 모델을 구성하고, 모델 설계부터 학습용 데이터 전처리까지 수행할 수 있는 솔루션입니다.</p>
+
+        <h3>솔루션 주요 기능 (팀 단위)</h3>
+        <ol>
+          <li>블록 기반 AI 모델 구성 – 각 레이어를 블록으로 제공해 코딩 없이 모델 구성</li>
+          <li>Python 코드 자동 생성 – 캔버스에서 레이어를 연결하면 구조에 맞는 Python 코드가 실시간 생성</li>
+          <li>실시간 모델 구조 검증 – 입력·출력 차원과 파라미터 유효성을 검증하고, 잘못된 연결은 인텔리센스로 오류 안내</li>
+          <li>모델 파라미터 최적화 – 구성된 레이어·파라미터를 기반으로 학습 조건 조정</li>
+          <li>데이터셋 자동 전처리 – 모델 입력 형태에 맞게 데이터셋 전처리</li>
+        </ol>
+
+        <hr />
+
+        <h2>🛠 담당 업무</h2>
+        <p>AI 모델의 기본 구조와 레이어 간 연산 관계를 학습하고, 이를 서비스 기능으로 구현했습니다.</p>
+        <ul>
+          <li>레이어 연결 관계를 검증하는 BlockIntellisense 설계·구현</li>
+          <li>데이터셋 전처리 파이프라인 BlockPreprocessor 구축</li>
+          <li>CNN의 Convolution · Pooling 등 레이어 연산 구현</li>
+          <li>Python 코드를 입력하면 해당 코드에 맞는 레이어 블록을 생성하는 기능 구현</li>
+        </ul>
+
+        <hr />
+
+        <h2>💡 핵심 구현</h2>
+        <h3>1. BlockIntellisense – 레이어 연결 실시간 검증</h3>
+        <p>사용자가 캔버스에서 블록을 잘못 연결했을 때 오류의 원인을 실시간으로 파악할 수 있도록, 레이어 간 연결 관계를 검증하는 인텔리센스 로직을 설계하고 구현했습니다.</p>
+
+        <div class="doc-img-container">
+          <img src="assets/arkblock-intellisense-errors.png" alt="BlockIntellisense 오류 유형 예시" class="doc-img" />
+          <div class="doc-img-caption">BlockIntellisense 오류 유형 예시 (클릭 시 확대)</div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 30%;">오류</th>
+                <th>검증 내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>DimensionError</strong></td>
+                <td>현재 레이어의 출력 차원과 다음 레이어의 입력 차원이 일치하는지 검증</td>
+              </tr>
+              <tr>
+                <td><strong>ValueError</strong></td>
+                <td>레이어 간 연산에 필요한 값이 유효한지 검증. Pooling이 반복돼 데이터 값이 소실(0)되는 경우를 탐지</td>
+              </tr>
+              <tr>
+                <td><strong>TensorMergeError</strong></td>
+                <td>여러 입력을 병합할 때 각 Tensor의 크기가 같은지 검증 (예: <code>3×3</code>+<code>3×3</code>은 정상, 크기가 다르면 오류)</td>
+              </tr>
+              <tr>
+                <td><strong>OutputDimensionError</strong></td>
+                <td>최종 출력 레이어의 차원이 요구되는 형태인지 검증</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h4>클래스 설계</h4>
+        <div class="doc-img-container">
+          <img src="assets/arkblock-intellisense-uml.png" alt="BlockIntellisense 클래스 다이어그램" class="doc-img" />
+          <div class="doc-img-caption">BlockIntellisense 클래스 다이어그램 (클릭 시 확대)</div>
+        </div>
+
+        <ul>
+          <li>추상 클래스 <code>ModelErrorChecker</code>를 상속한 오류 유형별 Checker(<code>DimensionErrorChecker</code>, <code>OutputDimensionErrorCheck</code>, <code>TensorMergeErrorCheck</code>, <code>ValueErrorChecker</code>)가 각자 <code>check()</code>를 구현합니다.</li>
+          <li><code>ErrorManager</code>가 Checker들을 모아 <code>errorCheck()</code>로 모델 전체의 오류를 수집합니다.</li>
+          <li>오류는 추상 클래스 <code>ModelError</code>(유형·블록 ID·라인·메시지)를 상속한 오류별 클래스로 표현하고, <code>ErrorMessageManager</code>가 사용자에게 보여줄 메시지를 생성합니다.</li>
+          <li><code>LayerManager</code>가 패딩·풀링·합성곱·업샘플링·reshape 등 레이어별 출력 값 계산을 담당해 Checker가 공통으로 사용합니다.</li>
+          <li>새 오류 유형이 필요하면 Checker와 Error 클래스를 추가하는 방식으로 확장할 수 있는 구조입니다.</li>
+        </ul>
+
+        <h3>2. BlockPreprocessor – 데이터셋 전처리 파이프라인</h3>
+        <p>AI 모델 학습에 쓰이는 데이터셋을 자동으로 전처리하는 파이프라인을 구축했습니다.</p>
+
+        <div class="doc-img-container">
+          <img src="assets/arkblock-preprocessor-uml.png" alt="BlockPreprocessor 클래스 다이어그램" class="doc-img" />
+          <div class="doc-img-caption">BlockPreprocessor 클래스 다이어그램 (클릭 시 확대)</div>
+        </div>
+
+        <ul>
+          <li>CIFAR-10 · CIFAR-100 · MNIST · Fashion-MNIST 등 기본 제공 데이터셋 전처리 지원</li>
+          <li>사용자가 직접 데이터를 입력하는 Custom 데이터셋 전처리 지원</li>
+          <li>모델 학습에 필요한 형태로 데이터를 변환해 이후 학습 단계에서 활용</li>
+          <li>추상 클래스 <code>Preprocesser</code>를 상속한 데이터셋별 전처리 클래스를 <code>DataBlockPreprocesserManager</code>가 입력 설정에 따라 호출하는 구조</li>
+        </ul>
+
+        <hr />
+
+        <h2>🔥 어려웠던 점 / 해결 방법</h2>
+        <ul>
+          <li><strong>문제</strong>: 머신러닝 사전 지식이 부족한 상태에서, 약 2주 안에 필요한 개념을 학습하고 프로젝트에 적용해야 했음. 특히 CNN의 Convolution · Pooling 연산을 직접 구현하는 과정이 어려웠음</li>
+          <li><strong>해결</strong>: 팀원의 도움으로 기본 개념을 빠르게 익힌 뒤, 구현을 통해 이해도를 높였음. 막히는 부분은 포기하지 않고 매달렸고, 하루를 투자해도 풀리지 않는 문제는 팀원과 함께 해결</li>
+          <li><strong>결과</strong>: 짧은 기간에 모르는 영역을 구현하며 학습하는 방식을 익힘</li>
+        </ul>
+
+        <hr />
+
+        <h2>🌱 결과 및 배운 점</h2>
+        <ul>
+          <li>CNN의 Convolution · Pooling 등 레이어를 직접 구현했고, Python 코드를 입력하면 해당 코드에 맞는 레이어 블록을 생성하는 기능까지 구현했습니다.</li>
+          <li>백지에서 코드를 직접 구현하는 데 느낀 한계를 완전히 넘지는 못했지만, 팀워크의 중요성을 깨달았습니다.</li>
+          <li>서비스 종료된 유사 서비스에서 아이디어를 얻어, 교육 목적의 오류 인텔리센스 기능을 직접 설계해 본 경험이 되었습니다.</li>
+        </ul>
+
+        <div class="page-navigation-bar">
+          <a href="#custom-fairytale" class="page-nav-link" data-switch-tab="custom-fairytale">&larr; 이전 프로젝트: Custom Fairytale</a>
+          <a href="#overview" class="page-nav-link" data-switch-tab="overview">처음으로 가기 &uarr;</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Image Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="닫기">&times;</button>
+    <img src="" alt="" class="lightbox-content" id="lightboxImg" />
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Developer Portfolio. All rights reserved.</p>
+      <p>Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
